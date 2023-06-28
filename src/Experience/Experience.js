@@ -7,8 +7,12 @@ import Time from "./Utils/Time";
 import Camera from "./Camera";
 import Renderer from "./Renderer";
 
+//  misc
+import sources from "./sources";
+
 //  World
 import World from "./World/World";
+import Resources from "./Utils/Resorces";
 
 //  singleton experience class for accessing it globally
 let instance = null;
@@ -30,6 +34,7 @@ export default class Experience {
     this.sizes = new Sizes();
     this.time = new Time();
     this.scene = new THREE.Scene();
+    this.resources = new Resources(sources);
     this.camera = new Camera();
     this.renderer = new Renderer();
 
